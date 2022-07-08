@@ -1,0 +1,239 @@
+* {
+    /*eliminamos margenes y rellenos predeterminados*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Sans serif';
+}
+
+.contenedor {
+    /*abarque soloamente un espacio*/
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bg_animate {
+    /*fondo de nuestra pagina*/
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #8DD0F4, #5EA1C4);
+    position: relative;
+    overflow: hidden;
+}
+
+.header_nav {
+    /*abarque todo lo largo*/
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header_nav .contenedor {
+    /*hicimos que los elemntos quedaran al lado del titulo*/
+    /*si queremos que esten debajo eliminar este codigo*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.header_nav h1 {
+    color: #fff;
+    font-family: 'Gagalin';
+    font-size: 60px;
+}
+
+.header_nav nav a {
+    /*agregamos espacios en menu*/
+    color: #fff;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+.header_nav nav a:hover {
+    /*cambiar color*/
+    border-radius: 15px;
+    background-color: #2F7CA5;
+    padding: 10px;
+}
+
+.banner {
+    /*hacemos que todo este al lado*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.banner_tittle h2 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.banner_tittle .llamanos {
+    /*estilos del boton*/
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: #2F7CA5;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.llamanos:hover {
+    /*cambio color boton*/
+    background-color: #A4D4ED;
+    color: #13567A;
+}
+
+.banner_img img {
+    /*damos un tamaño determinado a la imagen*/
+    width: 600px;
+    display: block;
+}
+
+.banner_img {
+    animation: movimiento 2.5s linear infinite;
+}
+
+
+/*empieza diseño de efecto burbuja*/
+
+.burbuja {
+    border-radius: 50%;
+    background: #fff;
+    opacity: .3;
+    position: absolute;
+    /*para que salgan desde abajo(mas margen abajo)*/
+    bottom: -100;
+    /*: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 5s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 36%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 57%;
+    animation-duration: 7s;
+    animation-delay: 4s;
+}
+
+.burbuja:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 16%;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+.burbuja:nth-child(4) {
+    width: 38px;
+    height: 38px;
+    left: 89%;
+    animation-duration: 5s;
+    animation-delay: 6s;
+}
+
+.burbuja:nth-child(5) {
+    width: 53px;
+    height: 53px;
+    left: 67%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(6) {
+    width: 32px;
+    height: 32px;
+    left: 70%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+.burbuja:nth-child(7) {
+    width: 45px;
+    height: 45px;
+    left: 43%;
+    animation-duration: 4s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(8) {
+    width: 65x;
+    height: 65px;
+    left: 78;
+    animation-duration: 2s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(9) {
+    width: 87px;
+    height: 87px;
+    left: 87%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    width: 35px;
+    height: 35px;
+    left: 23%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    30% {
+        transform: translateX(30px);
+    }
+    50% {
+        opacity: .4;
+    }
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+
+/**efecto imagen*/
+
+@keyframes movimiento {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
